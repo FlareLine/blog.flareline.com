@@ -1,0 +1,34 @@
+{
+  "name": "blog.flareline.com",
+  "version": "1.0.0",
+  "description": "📔 Blog service for flareline.com",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --runInBand",
+    "postbuild": "cp ./package.json ./dist/package.json && cd ./dist && npm install --only=production",
+    "cdk": "cdk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlareLine/blog.flareline.com.git"
+  },
+  "author": "Ethan Wright <ethan@flareline.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlareLine/blog.flareline.com/issues"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.6",
+    "aws-sdk": "^2.921.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "@types/jest": "^27.4.1",
+    "@types/uuid": "^8.3.4",
+    "esbuild": "^0.14.25",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.6.2"
+  }
+}
